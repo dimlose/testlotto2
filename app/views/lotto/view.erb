@@ -1,0 +1,19 @@
+<center>
+<h2>recommend number</h2>
+    <%@numbers.each do |number| %>
+        <%= image_tag number.to_s + ".jpg" %>
+    <%end%>
+
+<h2>bonus Number</h2>
+    <%= image_tag @bonus.join("") + ".jpg" %>
+    
+<br>
+
+<button type="button" id="reload" class="btn btn-lg btn-primary">AGAIN</button>
+</center>
+<script>
+    $('#reload').click(function(){
+        location.reload();
+    })
+        
+</script>
