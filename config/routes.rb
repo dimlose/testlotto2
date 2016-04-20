@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root "lotto#view"
+  get 'lotto/view'
+  get'/save' => 'lotto#save'
+  
+  get 'destroy/:game_id' => 'lotto#destroy'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,21 @@
+<div class="container" style="margin-top:50px;">
+    <center>
+        <h1>Save Page</h1>
+            <% @save_games.each do |s|%>
+                <h2>recommend number</h2>
+                    <%= image_tag s.db_num1.to_s + ".jpg" %>
+                    <%= image_tag s.db_num2.to_s + ".jpg" %>
+                    <%= image_tag s.db_num3.to_s + ".jpg" %>
+                    <%= image_tag s.db_num4.to_s + ".jpg" %>
+                    <%= image_tag s.db_num5.to_s + ".jpg" %>
+                    <%= image_tag s.db_num6.to_s + ".jpg" %>
+                <br>
+                <h2>bonus number</h2>
+                    <%= image_tag s.db_bonus.to_s + ".jpg" %>
+                <br>
+                    <a href="/">[ReSave]</a>
+                    <a href="/destroy/<%= s.id %>">[Delete]</a>
+                <hr>
+            <% end %>
+    <center>
+</div>
